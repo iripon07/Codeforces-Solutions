@@ -1,44 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-    int long long n;
+    long long n;
     cin>>n;
-    int remember, count = 0;
+    int count=0, rem;
     while(n != 0){
-        remember = n%10;
+        rem = n%10;
         n = n/10;
-        if( remember == 7 || remember == 4){
+        if(rem == 4 || rem == 7){
             count++;
-        }if(count != 4 && count != 7){
+        }
+    }
+    if(count != 4 && count != 7){
             cout<<"NO";
         }else{
             cout<<"YES";
         }
-    }
     return 0;
-}
-
-#include<iostream>
-using namespace std;
-
-int main(){
-  long long n;
-  cin>>n;
-  int check = 0;
-  int rem;
-  while(n != 0){
-    rem = n%10;
-    n /= 10;
-    if(rem == 7 || rem == 4){
-      check++;
-    }
-
-  }
-  if(check != 4 && check != 7){
-    cout<<"NO";
-  }
-  else{
-    cout<<"YES";
-  }
-  return 0;
 }
